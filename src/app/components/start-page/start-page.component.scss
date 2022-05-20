@@ -1,0 +1,196 @@
+// Стили для секции "Start-Page"
+#username {
+    grid-area: username;
+    margin-bottom: var(--mb-16);
+}
+
+#password {
+    grid-area: password;
+}
+
+#remember {
+    grid-area: remember;
+}
+
+#reset-account {
+    grid-area: resetAccount;
+}
+
+#btn-login {
+    grid-area: login;
+    margin-bottom: 24px;
+}
+
+#register {
+    grid-area: register;
+}
+
+.start-page {
+    margin: 0;
+    color: var(--white-color);
+
+    &__container {
+        background-image: url('../../../assets/start-screen-bg.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 100vh;
+        padding-top: 40px;
+    }
+
+    &__wrapper {
+        width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__logo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 150px;
+        margin-bottom: var(--mb-40);
+    }
+
+    &__content {
+        width: 1100px;
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+
+        &-left {
+            flex: 50%;
+            padding: 70px;
+            background-color: var(--accent-color);
+
+            &-title {
+                font-weight: var(--font-bold);
+                font-size: var(--h2-font-size);
+                margin-bottom: var(--mb-32);
+                text-align: center;
+            }
+
+            &-description {
+                font-weight: var(--font-light);
+                line-height: 22px;
+                margin-bottom: var(--mb-32);
+            }
+
+            &-cards {
+                width: 350px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                row-gap: 20px;
+
+                &-card {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 20px;
+
+                    &-logo {
+                        border: 1px solid var(--white-color);
+                        padding: 12px;
+                        border-radius: 12px;
+
+                        i {
+                            display: block;
+                            font-size: 24px;
+                        }
+                    }
+
+                    &-info {
+                        &-title {
+                            font-weight: var(--font-bold);
+                            margin-bottom: var(--mb-4);
+                            text-transform: uppercase;
+                        }
+
+                        &-description {
+                            font-weight: var(--font-light);
+                            font-size: var(--small-font-size);
+                        }
+                    }
+                }
+            }
+        }
+
+        &-right {
+            flex: 50%;
+            padding: 70px;
+            color: var(--black-color);
+            background-color: var(--white-color);
+
+            &-logo {
+                width: 60px;
+                height: 60px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: var(--mb-32);
+            }
+
+            &-title {
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: var(--font-black);
+                font-size: var(--h2-font-size);
+                margin-bottom: var(--mb-16);
+                letter-spacing: 2px;
+            }
+
+            &-subtitle {
+                display: block;
+                text-align: center;
+                font-weight: var(--font-medium);
+                font-size: var(--h3-font-size);
+                margin-bottom: 24px;
+            }
+
+            &-form {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                grid-template-areas:
+                "username username"
+                "password password"
+                "remember resetAccount"
+                "login login"
+                "register register";
+                justify-items: center;
+                align-items: center;
+
+                &-input {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #F7F7F7;
+                    padding: 5px 10px;
+
+                    input {
+                        width: 400px;
+                        height: 30px;
+                        border: none;
+                        padding: 5px 10px;
+                    }
+
+                    &-icon {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        width: 40px;
+                        height: 40px;
+                        background-color: #FFF;
+                        margin-right: 10px;
+
+                        i {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
