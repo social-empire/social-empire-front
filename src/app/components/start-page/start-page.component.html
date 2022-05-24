@@ -73,15 +73,19 @@
                 </div>
     
                 <div class="start-page__content-right">
-                    <!-- <ng-container *ngIf="isGuest; then second else first"></ng-container>
-                    <ng-template #first>
-                        <app-login (registration)="isUser()"></app-login>
-                    </ng-template>
-
-                    <ng-template #second>
-                        <app-registration (login)="isUser()"></app-registration>
-                    </ng-template> -->
-                    <router-outlet></router-outlet>
+                    <div [ngSwitch]="num">
+                        <div *ngSwitchCase="1">
+                            <app-registration (login)="openLogin()"></app-registration>
+                        </div>
+    
+                        <div *ngSwitchCase="2">
+                            <app-reset-password (login)="openLogin()"></app-reset-password>
+                        </div>
+    
+                        <div *ngSwitchDefault>
+                            <app-login (registration)="openRegistration()" (reset)="openReset()"></app-login>
+                        </div>
+                    </div>
                 </div>
             </div>
     
@@ -101,3 +105,5 @@
         </div>
     </div>
 </section>
+
+<router-outlet></router-outlet>

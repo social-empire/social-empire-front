@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-start-page',
@@ -7,14 +6,21 @@ import {Router} from '@angular/router';
   styleUrls: ['./start-page.component.scss']
 })
 export class StartPageComponent implements OnInit {
-  public isGuest: boolean = false
+  public num: number = 0
 
-  public isUser(): void {
-    this.isGuest = !this.isGuest;
+  public openLogin(): void {
+    this.num = 0;
   }
 
-  constructor(private Router: Router) {
-    this.Router.events.subscribe(console.log);
+  public openRegistration(): void {
+    this.num = 1;
+  }
+
+  public openReset(): void {
+    this.num = 2;
+  }
+
+  constructor() {
   }
 
   ngOnInit(): void {

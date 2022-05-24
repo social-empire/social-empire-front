@@ -13,6 +13,13 @@ export class LoginComponent implements OnInit {
     this.registration.emit();
   }
 
+  @Output()
+  public reset = new EventEmitter()
+
+  public onResetter(): void {
+    this.reset.emit();
+  }
+
   constructor() {}
 
   ngOnInit(): void {
