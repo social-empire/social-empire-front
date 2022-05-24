@@ -1,1 +1,65 @@
-<p>registration works!</p>
+<article>
+    <div class="start-page__content-right-logo">
+        <img src="../../../assets/short-logo.png" alt="Our Short Logo"/>
+    </div>
+    
+    <h2 class="start-page__content-right-title">
+        Регистрация
+    </h2>
+    
+    <form class="start-page__content-right-form">
+        <div class="start-page__content-right-form-inputs">
+            <div class="start-page__content-right-form-inputs-input">
+                <span class="start-page__content-right-form-inputs-input-icon">
+                    <i class='bx bx-user'></i>
+                </span>
+    
+                <input required type="text" placeholder="Username"/>
+            </div>
+
+            <div class="start-page__content-right-form-inputs-input">
+                <span class="start-page__content-right-form-inputs-input-icon">
+                    <i class='bx bx-envelope'></i>
+                </span>
+    
+                <input required type="email" placeholder="Email"/>
+            </div>
+
+            <div class="start-page__content-right-form-inputs-input">
+                <span class="start-page__content-right-form-inputs-input-icon">
+                    <i class='bx bx-question-mark'></i>
+                </span>
+    
+                <input required type="text" placeholder="Secret Question"/>
+            </div>
+    
+            <div class="start-page__content-right-form-inputs-input">
+                <span class="start-page__content-right-form-inputs-input-icon">
+                    <i class='bx bx-lock-open'></i>
+                </span>
+    
+                <input required type="password" placeholder="Password"/>
+            </div>
+
+            <div class="start-page__content-right-form-inputs-input">
+                <span class="start-page__content-right-form-inputs-input-icon">
+                    <i class='bx bx-key'></i>
+                </span>
+    
+                <input required type="password" placeholder="Repeat Password"/>
+            </div>
+        </div>
+    
+        <div class="start-page__content-right-form-register">
+            <button class="start-page__content-right-form-register-btn">
+                Зарегистрироваться
+            </button>
+        </div>
+
+        <div class="start-page__content-right-form-login">
+            <a (click)="onLogin()">
+                Войти в аккаунт
+            </a>
+        </div>
+    </form>
+</article>

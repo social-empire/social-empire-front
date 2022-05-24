@@ -73,67 +73,15 @@
                 </div>
     
                 <div class="start-page__content-right">
-                    <div class="start-page__content-right-logo">
-                        <img src="../../../assets/short-logo.png" alt="Our Short Logo"/>
-                    </div>
-    
-                    <h1 class="start-page__content-right-title">
-                        Добро Пожаловать!
-                    </h1>
-    
-                    <span class="start-page__content-right-subtitle">
-                        Войти в аккаунт Social Empire
-                    </span>
-    
-                    <form class="start-page__content-right-form">
-                        <div class="start-page__content-right-form-inputs">
-                            <div class="start-page__content-right-form-inputs-input">
-                                <span class="start-page__content-right-form-inputs-input-icon">
-                                    <i class='bx bx-user'></i>
-                                </span>
+                    <!-- <ng-container *ngIf="isGuest; then second else first"></ng-container>
+                    <ng-template #first>
+                        <app-login (registration)="isUser()"></app-login>
+                    </ng-template>
 
-                                <input required type="text" placeholder="Email / Username"/>
-                            </div>
-
-                            <div class="start-page__content-right-form-inputs-input">
-                                <span class="start-page__content-right-form-inputs-input-icon">
-                                    <i class='bx bx-lock-open'></i>
-                                </span>
-
-                                <input required type="password" placeholder="Password"/>
-                            </div>
-                        </div>
-
-                        <div class="start-page__content-right-form-wrapper">
-                            <div class="start-page__content-right-form-wrapper-checkbox">
-                                <label class="checkbox path">
-                                    <input type="checkbox"/>
-                                    <svg viewBox="0 0 21 21">
-                                        <path d="M5,10.75 L8.5,14.25 L19.4,2.3 C18.8333333,1.43333333 18.0333333,1 17,1 L4,1 C2.35,1 1,2.35 1,4 L1,17 C1,18.65 2.35,20 4,20 L17,20 C18.65,20 20,18.65 20,17 L20,7.99769186"></path>
-                                    </svg>
-                                    Запомнить
-                                </label>
-                            </div>
-
-                            <div class="start-page__content-right-form-wrapper-resetpassword">
-                                <a href="#" target="_blank">
-                                    Забыли Пароль?
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="start-page__content-right-form-login">
-                            <button class="start-page__content-right-form-login-btn">
-                                Войти в аккаунт
-                            </button>
-                        </div>
-
-                        <div class="start-page__content-right-form-register">
-                            <a href="#" target="_blank">
-                                Зарегистрироваться
-                            </a>
-                        </div>
-                    </form>
+                    <ng-template #second>
+                        <app-registration (login)="isUser()"></app-registration>
+                    </ng-template> -->
+                    <router-outlet></router-outlet>
                 </div>
             </div>
     

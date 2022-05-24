@@ -1,0 +1,22 @@
+@import '../login/login.component';
+
+.start-page {
+    &__content {
+        &-right {
+
+            &-form {
+                margin-top: 30px;
+
+                &-inputs {
+                    row-gap: 20px;
+                }
+
+                &-register {
+                    &-btn {
+                        margin-top: var(--mb-10);
+                    }
+                }
+            }
+        }
+    }
+}

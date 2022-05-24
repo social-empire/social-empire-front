@@ -6,7 +6,6 @@ import {AppComponent} from './app.component';
 import {StartPageComponent} from './components/start-page/start-page.component';
 import {StartPageModule} from './components/start-page/start-page.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
